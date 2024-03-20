@@ -1,0 +1,9 @@
+.box {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 144, 158, 0.6),
+    rgba(255, 255, 255, 1)
+  );
+  background-color: white;
+  color: #1b2a49;
+}
