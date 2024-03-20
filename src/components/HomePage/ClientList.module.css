@@ -1,0 +1,12 @@
+.client_list {
+  display: flex;
+  justify-content: center;
+  color: #1b2a49;
+  vertical-align: middle;
+}
+.list_box {
+  border: 2px solid #1b2a49;
+  border-radius: 8px;
+  background-color: white;
+  width: 75%;
+}

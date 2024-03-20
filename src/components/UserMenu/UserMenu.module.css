@@ -4,8 +4,16 @@
   gap: 12px;
 }
 
-.username {
-  font-weight: 700;
-  padding-right: 10px;
-  padding-top: 10px;
+.user_avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  padding-top: 8px;
+  background: rgb(0, 144, 158);
+  margin-top: 10px;
+  text-transform: uppercase;
 }

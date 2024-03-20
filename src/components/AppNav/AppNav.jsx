@@ -1,7 +1,7 @@
 import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../redux/hooks/useAuth';
 import css from './AppNav.module.css';
 
 export const AppNav = () => {

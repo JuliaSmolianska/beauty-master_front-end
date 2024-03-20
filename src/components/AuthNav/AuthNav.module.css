@@ -4,6 +4,11 @@
   padding: 12px;
   font-weight: 700;
   color: white;
+  z-index: 3;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 .link.active {

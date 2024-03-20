@@ -1,0 +1,35 @@
+.listClientsBox {
+  min-height: 200px;
+  width: 100%;
+  min-width: 300px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 144, 158, 0.4),
+    rgba(255, 255, 255, 1)
+  );
+  background-color: white;
+}
+.date {
+  text-align: center;
+  color: #1b2a49;
+  font-weight: bold;
+  line-height: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.btn_addRecord {
+  background-color: #1b2a49;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 6px 25px 9px;
+  transition: 500ms;
+}
+.btn_addRecord:hover {
+  background-color: #465881;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 6px 25px 9px;
+}
