@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import css from '../RegisterForm/RegisterForm.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +11,8 @@ import { NavLink } from 'react-router-dom';
 import { IoLogInOutline } from 'react-icons/io5';
 import { IoMdEye } from 'react-icons/io';
 import { IoMdEyeOff } from 'react-icons/io';
+import { selectIsLoading } from '../../redux/auth/selectors';
+import Loader from '../Loader';
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -25,6 +27,7 @@ const validationSchema = Yup.object({
 export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const loading = useSelector(selectIsLoading);
 
   const handleTogglePassword = () => {
     setShowPassword(prevState => !showPassword);
@@ -106,16 +109,23 @@ export const LoginForm = () => {
               {showPassword ? <IoMdEye /> : <IoMdEyeOff />}
             </span>
           </label>
-          <>
-            <div className={css.btnBox}>
-              <button className={css.btn} type="submit">
-                Вхід <IoLogInOutline />
-              </button>
-            </div>
-            <div className="text-center mt-4 mb-3">
-              <NavLink to="/forgot-password">Забули пароль?</NavLink>
-            </div>
-          </>
+          {loading ? (
+            <>
+              <Loader />
+              <Col className="text-center mt-2 mb-3">Вхід в систему...</Col>
+            </>
+          ) : (
+            <>
+              <div className={css.btnBox}>
+                <button className={css.btn} type="submit">
+                  Вхід <IoLogInOutline />
+                </button>
+              </div>
+              <div className="text-center mt-4 mb-3">
+                <NavLink to="/forgot-password">Забули пароль?</NavLink>
+              </div>
+            </>
+          )}
         </Form>
       </Col>
     </Formik>

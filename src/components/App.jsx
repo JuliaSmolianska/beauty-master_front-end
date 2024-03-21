@@ -6,6 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from '../redux/hooks/useAuth';
+import Loader from './Loader';
 
 const WelcomePage = lazy(() => import('../pages/Welcome'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -23,52 +24,61 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<WelcomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute redirectTo="/login" component={<RegisterPage />} />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/home" component={<LoginPage />} />
-          }
-        />
-        <Route
-          path="/home"
-          element={
-            <PrivateRoute redirectTo="/login" component={<HomePage />} />
-          }
-        />
-        <Route
-          path="/clients"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ClientsPage />} />
-          }
-        />
-        <Route
-          path="/settings"
-          element={
-            <PrivateRoute redirectTo="/login" component={<SettingsPage />} />
-          }
-        />
-        <Route
-          path="/forgot-password"
-          element={
-            <RestrictedRoute
-              component={<ForgotPasswordPage />}
-              redirectTo="/login"
-            />
-          }
-        />
-      </Route>
-    </Routes>
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<WelcomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/login"
+                component={<RegisterPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/home" component={<LoginPage />} />
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute redirectTo="/login" component={<HomePage />} />
+            }
+          />
+          <Route
+            path="/clients"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ClientsPage />} />
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <PrivateRoute redirectTo="/login" component={<SettingsPage />} />
+            }
+          />
+          <Route
+            path="/forgot-password"
+            element={
+              <RestrictedRoute
+                component={<ForgotPasswordPage />}
+                redirectTo="/login"
+              />
+            }
+          />
+        </Route>
+      </Routes>
+      {isRefreshing && (
+        <>
+          <Loader />
+          <b className="text-center mt-2 mb-3">Оновлення сторінки...</b>
+        </>
+      )}
+    </>
   );
 };

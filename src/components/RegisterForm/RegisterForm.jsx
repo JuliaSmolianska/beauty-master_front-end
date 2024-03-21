@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import css from './RegisterForm.module.css';
 import Col from 'react-bootstrap/Col';
@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { IoMdEye } from 'react-icons/io';
 import { IoMdEyeOff } from 'react-icons/io';
 import toast from 'react-hot-toast';
+import { selectIsLoading } from '../../redux/auth/selectors';
+import Loader from '../Loader';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().min(3).max(32).required("Введіть ваше ім'я"),
@@ -25,6 +27,7 @@ const validationSchema = Yup.object().shape({
 export const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const loading = useSelector(selectIsLoading);
 
   const handleSubmit = async (values, { resetForm }) => {
     const newUser = values;
@@ -130,11 +133,20 @@ export const RegisterForm = () => {
             />
           </label>
 
+          {loading ? (
+            <>
+              <Loader />
+              <Col className="text-center mt-2 mb-3">
+                Зачекайте, реєструємо...
+              </Col>
+            </>
+          ) : (
             <div className={css.btnBox}>
               <button className={css.btn} type="submit">
                 Зареєструватись
               </button>
             </div>
+          )}
         </Form>
       </Col>
     </Formik>
