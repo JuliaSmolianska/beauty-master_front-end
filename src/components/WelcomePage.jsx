@@ -15,7 +15,7 @@ const WelcomePage = () => {
         </div>
 
         <div className="border rounded border-black bg-white m-1 p-1">
-          Зі мною ти з легко зможеш планувати свій робочій час та вихідні,
+          Зі мною ти з легкістю зможеш планувати свій робочій час та вихідні,
           уникаючи непорозумінь з записами клієнтів.
         </div>
         <div className="border rounded border-black bg-white m-1 p-1">
