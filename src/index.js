@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/beauty-master">
+        <BrowserRouter basename="/beauty-master_front-end">
           <App />
         </BrowserRouter>
       </PersistGate>
