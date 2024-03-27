@@ -6,7 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from '../redux/hooks/useAuth';
-import Loader from './Loader';
+import Refreshing from 'pages/Refreshing';
 
 const WelcomePage = lazy(() => import('../pages/Welcome'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -24,11 +24,18 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <Refreshing />
+  ) : (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<WelcomePage />} />
+          <Route
+            path="/"
+            element={
+              <RestrictedRoute redirectTo="/home" component={<WelcomePage />} />
+            }
+          />
           <Route
             path="/register"
             element={
@@ -73,12 +80,6 @@ export const App = () => {
           />
         </Route>
       </Routes>
-      {isRefreshing && (
-        <>
-          <Loader />
-          <b className="text-center mt-2 mb-3">Оновлення сторінки...</b>
-        </>
-      )}
     </>
   );
 };
