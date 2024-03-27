@@ -316,9 +316,6 @@ const UserSettingsForm = () => {
                 className="text-danger"
               />
             </label>
-            <div className="text-center mt-4 mb-3">
-              <NavLink to="/forgot-password">Забули пароль?</NavLink>
-            </div>
             <div className=" d-flex justify-content-between text-center mt-4">
               <button className={css.btn_save} type="submit">
                 Зберегти зміни
