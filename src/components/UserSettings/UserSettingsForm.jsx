@@ -28,6 +28,12 @@ const validationSchema = Yup.object().shape({
     .max(23, 'Час початку робочого дня має бути не більше 23')
     .required('Введіть час закінчення робочого дня, год'),
   weekendSchedule: Yup.array().of(Yup.string()),
+  password: Yup.string()
+    .min(8, 'Введіть коректний пароль, не меньше 8 символів')
+    .max(32),
+  newPassword: Yup.string()
+    .min(8, 'Введіть коректний пароль, не меньше 8 символів')
+    .max(32),
 });
 
 const UserSettingsForm = () => {
@@ -87,7 +93,7 @@ const UserSettingsForm = () => {
               toast.error(
                 `Сталася помилка, налаштування профілю не оновлено! Оновіть сторінку та спробуйте знову`,
                 {
-                  duration: 3000,
+                  duration: 4000,
                   position: 'top-center',
                 }
               );
