@@ -6,7 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from '../redux/auth/operations';
 import { useAuth } from '../redux/hooks/useAuth';
-import Loading from '../pages/Welcome';
+import Loading from '../components/Loader';
 
 const WelcomePage = lazy(() => import('../pages/Welcome'));
 const RegisterPage = lazy(() => import('../pages/Register'));
