@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/beauty-master_front-end/static/css/main.101d7041.css",
-    "main.js": "/beauty-master_front-end/static/js/main.4b7b38c4.js",
+    "main.js": "/beauty-master_front-end/static/js/main.49c84762.js",
     "static/js/821.5e904246.chunk.js": "/beauty-master_front-end/static/js/821.5e904246.chunk.js",
     "static/css/236.1b16f646.chunk.css": "/beauty-master_front-end/static/css/236.1b16f646.chunk.css",
     "static/js/236.b57e13dd.chunk.js": "/beauty-master_front-end/static/js/236.b57e13dd.chunk.js",
@@ -14,14 +14,14 @@
     "static/css/574.2d2ab3ae.chunk.css": "/beauty-master_front-end/static/css/574.2d2ab3ae.chunk.css",
     "static/js/574.0f35dbd7.chunk.js": "/beauty-master_front-end/static/js/574.0f35dbd7.chunk.js",
     "static/css/470.1b16f646.chunk.css": "/beauty-master_front-end/static/css/470.1b16f646.chunk.css",
-    "static/js/470.203719a9.chunk.js": "/beauty-master_front-end/static/js/470.203719a9.chunk.js",
+    "static/js/470.279c5bcb.chunk.js": "/beauty-master_front-end/static/js/470.279c5bcb.chunk.js",
     "static/js/181.2de0d80d.chunk.js": "/beauty-master_front-end/static/js/181.2de0d80d.chunk.js",
     "static/js/373.85e8b207.chunk.js": "/beauty-master_front-end/static/js/373.85e8b207.chunk.js",
     "static/js/820.4f76bf5e.chunk.js": "/beauty-master_front-end/static/js/820.4f76bf5e.chunk.js",
     "static/js/372.50d66803.chunk.js": "/beauty-master_front-end/static/js/372.50d66803.chunk.js",
     "index.html": "/beauty-master_front-end/index.html",
     "main.101d7041.css.map": "/beauty-master_front-end/static/css/main.101d7041.css.map",
-    "main.4b7b38c4.js.map": "/beauty-master_front-end/static/js/main.4b7b38c4.js.map",
+    "main.49c84762.js.map": "/beauty-master_front-end/static/js/main.49c84762.js.map",
     "821.5e904246.chunk.js.map": "/beauty-master_front-end/static/js/821.5e904246.chunk.js.map",
     "236.1b16f646.chunk.css.map": "/beauty-master_front-end/static/css/236.1b16f646.chunk.css.map",
     "236.b57e13dd.chunk.js.map": "/beauty-master_front-end/static/js/236.b57e13dd.chunk.js.map",
@@ -34,7 +34,7 @@
     "574.2d2ab3ae.chunk.css.map": "/beauty-master_front-end/static/css/574.2d2ab3ae.chunk.css.map",
     "574.0f35dbd7.chunk.js.map": "/beauty-master_front-end/static/js/574.0f35dbd7.chunk.js.map",
     "470.1b16f646.chunk.css.map": "/beauty-master_front-end/static/css/470.1b16f646.chunk.css.map",
-    "470.203719a9.chunk.js.map": "/beauty-master_front-end/static/js/470.203719a9.chunk.js.map",
+    "470.279c5bcb.chunk.js.map": "/beauty-master_front-end/static/js/470.279c5bcb.chunk.js.map",
     "181.2de0d80d.chunk.js.map": "/beauty-master_front-end/static/js/181.2de0d80d.chunk.js.map",
     "373.85e8b207.chunk.js.map": "/beauty-master_front-end/static/js/373.85e8b207.chunk.js.map",
     "820.4f76bf5e.chunk.js.map": "/beauty-master_front-end/static/js/820.4f76bf5e.chunk.js.map",
@@ -42,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.101d7041.css",
-    "static/js/main.4b7b38c4.js"
+    "static/js/main.49c84762.js"
   ]
 }
