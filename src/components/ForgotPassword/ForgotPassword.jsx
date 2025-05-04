@@ -19,7 +19,7 @@ const ForgotPassword = () => {
 
   const handleSubmit = async ({ email }) => {
     try {
-      await axios.post('https://hload.dev/api', {
+      await axios.post('https://hload.dev/api/users/forgot-password', {
         email,
       });
       toast.success(
