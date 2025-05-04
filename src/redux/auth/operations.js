@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = "http://209.232.10.102:3000";
+axios.defaults.baseURL = "https://hload.dev/api";
 //axios.defaults.baseURL ="https://beauty-master-back-end.onrender.com";
 
 const setAuthHeader = token => {
