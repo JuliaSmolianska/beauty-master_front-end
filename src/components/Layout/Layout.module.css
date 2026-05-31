@@ -22,6 +22,11 @@ body {
   z-index: 2;
 }
 
+@media (min-width: 1200px) {
+  .box {
+    width: 70%;}
+}
+
 .context {
   width: 100%;
   min-height: 100vh;
