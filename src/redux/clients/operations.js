@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = "https://hload.dev/api";
-//axios.defaults.baseURL = "https://beauty-master-back-end.onrender.com";
+//axios.defaults.baseURL = "https://hload.dev/api";
+axios.defaults.baseURL = "https://beauty-master-back-end.onrender.com";
 
 export const allClients = createAsyncThunk(
   'clients/fetchAll',

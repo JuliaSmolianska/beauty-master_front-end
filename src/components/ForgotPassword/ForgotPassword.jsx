@@ -19,7 +19,7 @@ const ForgotPassword = () => {
 
   const handleSubmit = async ({ email }) => {
     try {
-      await axios.post('https://hload.dev/api/users/forgot-password', {
+      await axios.post('https://beauty-master-back-end.onrender.com/users/forgot-password', {
         email,
       });
       toast.success(
